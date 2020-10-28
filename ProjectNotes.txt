@@ -1,0 +1,3 @@
+padding - create space between border and text
+
+flex  - flexible item
