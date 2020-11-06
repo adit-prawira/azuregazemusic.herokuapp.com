@@ -12,11 +12,7 @@
         .header {
             padding: 80px;
             text-align: center;
-            background-image: url('Images/Single_Cover.png');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
+            background: center/cover url('Images/Single_Cover.png');
             color: black;
         }
         .header h1{
@@ -79,6 +75,7 @@
             margin-right: auto;
         }
 
+
         /* Adapt Website screen to any changes on browser window size */
 
         /* Change screen arrangement to column when window's width reach 700px */
@@ -101,12 +98,13 @@
             text-align: right;
             background: cadetblue;
         }
+
     </style>
 </head>
 <body>
 <div class = "header">
-    <h1 style="background-color: lightblue">Azure Gaze's</h1>
-    <p style="font-size: 20px; background-color: lightblue; color: black">Official Website</p>
+    <h1 style="background-color: rgba(62, 180, 137, 0.5);  border-radius: 10%">Azure Gaze</h1>
+    <p style="font-size: 20px; background-color: rgba(62, 180, 137, 0.5); border-radius: 10%; color: black">Welcome!</p>
 </div>
 
 <div class = "navbar">
@@ -126,6 +124,7 @@
 
     <div class = "main">
         <h2 align = "center"> RELEASES:</h2>
+
         <img src = "Images/waterfall.PNG" class = "center" width = "300" height = "300">
         <p align = "center">Title: waterfall</p>
         <p align = "center">Release Type: Single</p>
@@ -137,8 +136,59 @@
         <p align = "center">Release Date: Sep 20, 2020</p>
     </div>
 </div>
+
+<section id="SlideShowContainer" style = "display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden;">
+    <img class = "SlideShow" src = 'Images/waterfall.PNG' style="height: 100%; " />
+    <img class = "SlideShow" src = 'Images/Night%20Walk.png' style="height: 100%;" />
+    <img class = "SlideShow" src = 'Images/IMG_0125.PNG' style="height: 100%;" />
+    <img class = "SlideShow" src = 'Images/Single_.png' style="height: 100%;" />
+</section>
+
 <div class = "footer">
     <h5>© ℗ Azure Gaze</h5>
 </div>
+
+<script>
+    var slideIndex = 0;
+    autoChange();
+
+    function autoChange(){
+
+        var x = document.getElementsByClassName("SlideShow");
+        var container = document.getElementById("SlideShowContainer");
+
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none"
+        }
+
+        if (slideIndex >= x.length) {
+            slideIndex = 0
+        }
+
+        x[slideIndex].style.display = "block";
+
+        switch (slideIndex) {
+            case 0:
+                container.style.backgroundColor = "#fffefe";
+                break;
+            case 1:
+                container.style.backgroundColor = "#4e7f83";
+                break;
+            case 2:
+                container.style.backgroundColor = "#d6b99f";
+                break;
+            case 3:
+                container.style.backgroundColor = "#4a8a6d";
+                break;
+            default:
+                container.style.backgroundColor = "#fffefe";
+
+        }
+
+        slideIndex++;
+
+        setTimeout(autoChange, 1500);
+    }
+</script>
 </body>
 </html>

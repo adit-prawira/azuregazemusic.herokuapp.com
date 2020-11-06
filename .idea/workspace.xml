@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d909fa6-41d6-4cea-baf1-e23579c37826" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Images/myphoto.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectNotes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FirstPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FirstPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/IMG_0217.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Images/waterfall.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectNotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectNotes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -41,11 +41,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js" />
+      <recent name="$PROJECT_DIR$/css" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -57,7 +66,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603866200110</updated>
-      <workItem from="1603866210523" duration="13140000" />
+      <workItem from="1603866210523" duration="14903000" />
+      <workItem from="1603921905731" duration="332000" />
+      <workItem from="1604011070454" duration="4137000" />
+      <workItem from="1604104383580" duration="2370000" />
+      <workItem from="1604194418700" duration="1017000" />
+      <workItem from="1604238874907" duration="14000" />
+      <workItem from="1604279033275" duration="2508000" />
+      <workItem from="1604392795716" duration="1160000" />
+      <workItem from="1604480066033" duration="288000" />
     </task>
     <servers />
   </component>
@@ -65,14 +82,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="0" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604393048421">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="0" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1604393048421" />
     <state x="0" y="110" key="SettingsEditor" timestamp="1603871424271">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="0" y="110" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1603871424271" />
-    <state x="0" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1603866208583">
+    <state x="0" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1604480064868">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="0" y="293" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1603866208583" />
+    <state x="0" y="293" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1604480064868" />
     <state x="203" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603879331232">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
