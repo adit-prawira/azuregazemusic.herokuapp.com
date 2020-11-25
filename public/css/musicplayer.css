@@ -1,0 +1,194 @@
+.overallcontain {
+    height: 645px;
+    /*width:1350px;*/
+    width: 100%;
+    background-color: #ffe0e0;
+}
+.mainbox {
+    top: 300px;
+    height: 100px;
+    width: 410px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+    left: 400px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+}
+.roundbox {
+    position: absolute;
+    z-index: 15;
+    left: 25px;
+    height: 135px;
+    width: 135px;
+    background-color: #fc9;
+    border-radius: 360px;
+    top: -50px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+.roundbox img {
+    width: 135px;
+    height: 135px;
+    border-radius: 90px;
+    -webkit-animation: r1 6s linear infinite;
+    animation: r1 6s linear infinite;
+}
+@keyframes r1 {
+    0% {
+        transform: rotate(-369deg);
+    }
+    10% {
+        transform: rotate(0deg);
+    }
+}
+
+/*small hole at image box*/
+.smallbox {
+    position: absolute;
+    z-index: 17;
+    left: 50px;
+    top: 50px;
+    height: 35px;
+    width: 35px;
+    background-color: #fff4f4;
+    border-radius: 360px;
+}
+
+.button {
+    height: 70px;
+    width: 220px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 17;
+    top: 65px;
+    left: 150px;
+}
+.button a {
+    margin: 0px;
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    font-size: 30px;
+    color: #ccc;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+}
+#playButton {
+    background-image: url(icon/icons8-play-50.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+}
+#playButton:active {
+    position: relative;
+    top: 2px;
+}
+.playButton:hover {
+    background-color: #ccc;
+}
+
+.button i {
+    margin-top: 20px;
+}
+
+.button a:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+#muteButton {
+    /*background-image:url('icon/icons8-voice-filled-15.png');*/
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    margin-top: 67px;
+    margin-left: 15px;
+}
+
+/*backward playbar-box-css*/
+
+.playbar-box {
+    top: 225px;
+    height: 100px;
+    width: 380px;
+    background-color: #fff;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 5;
+    left: 413px;
+    border-radius: 15px;
+    -webkit-animation: barmove 5s;
+}
+@keyframes barmove {
+    0% {
+        top: 300px;
+    }
+    100% {
+        top: 225px;
+    }
+}
+
+.play-content {
+    left: 160px;
+    position: absolute;
+    z-index: 5;
+    margin-top: 5px;
+    font-family: sans-serif;
+}
+
+.text1 {
+    font-weight: bold;
+    font-size: 11px;
+}
+.text2 {
+    font-size: 10px;
+}
+
+#defultBar {
+    height: 3px;
+    width: 200px;
+    background: #000;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    margin-top: 10px;
+}
+
+#progressBar {
+    height: 3px;
+    width: 0px;
+    border-radius: 2px;
+    background: #f96;
+}
+
+/*timer*/
+.timer-text {
+    left: 160px;
+    position: absolute;
+    z-index: 5;
+    margin-top: 55px;
+    font-family: sans-serif;
+    font-size: 8px;
+}
+#fullDuration {
+    left: 180px;
+    position: absolute;
+    z-index: 5;
+    margin-top: -9px;
+}
+
+/**/

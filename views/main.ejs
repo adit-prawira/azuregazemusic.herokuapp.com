@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Azure Gaze</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            href="/your-path-to-fontawesome/css/fontawesome.css"
+            rel="stylesheet"
+        />
+        <link
+            href="/your-path-to-fontawesome/css/brands.css"
+            rel="stylesheet"
+        />
+        <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet" />
+        <%- include('style') %>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="#">upgrade your browser</a> to improve your experience.
+            </p>
+        <![endif]-->
+        <%- include('navbar') %>
+        <section align="center">
+            <img id="profile" src="Images/Sleep_Deprived.png" alt="..." />
+        </section>
+
+        <img
+            onclick="redirectColdMorning()"
+            id="art"
+            src="Images/IMG_0273.png"
+            alt="..."
+        /><img
+            onclick="redirectWaterfall()"
+            id="art"
+            src="Images/waterfall.PNG"
+            alt=""
+        /><img
+            onclick="redirectCityNight()"
+            id="art"
+            src="Images/Night%20Walk.png"
+            alt="..."
+        />
+        <img
+            onclick="redirectSpringtime()"
+            id="art"
+            src="Images/IMG_0125.png"
+            alt="..."
+        /><img
+            onclick="redirectWander()"
+            id="art"
+            src="Images/Single_.png"
+            alt=""
+        /><img
+            onclick="redirectSleep()"
+            id="art"
+            src="Images/Sleep_Deprived.png"
+            alt="..."
+        /><img onclick="" id="art" src="Images/IMG_0100.png" alt="..." /><img
+            onclick=""
+            id="art"
+            src="Images/Single_Cover.png"
+            alt="..."
+        /><img
+            onclick=""
+            id="art"
+            src="Images/VAPORGRAM1588515298534_1600x1600.jpg"
+            alt="..."
+        />
+
+        <section id="SlideShowContainer">
+            <img
+                class="SlideShow"
+                src="Images/IMG_0273.PNG"
+                style="height: 100%"
+            />
+
+            <img
+                class="SlideShow"
+                src="Images/waterfall.PNG"
+                style="height: 100%"
+            />
+            <img
+                class="SlideShow"
+                src="Images/Night%20Walk.png"
+                style="height: 100%"
+            />
+            <img
+                class="SlideShow"
+                src="Images/IMG_0125.PNG"
+                style="height: 100%"
+            />
+            <img
+                class="SlideShow"
+                src="Images/Single_.png"
+                style="height: 100%"
+            />
+            <img
+                class="SlideShow"
+                src="Images/Sleep_Deprived.png"
+                style="height: 100%"
+            />
+        </section>
+        <script src="javascript/redirect.js"></script>
+        <%- include('footer') %>
+    </body>
+</html>

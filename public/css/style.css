@@ -1,0 +1,107 @@
+i {
+    color: white;
+}
+body {
+    font-family: Geneva, Geneva, sans-serif;
+}
+.header {
+    padding: 80px;
+    text-align: center;
+    background: center/cover url("../Images/Single_Cover.png");
+    color: black;
+}
+.header h1 {
+    font-size: 60px;
+}
+
+/*style top navigation bar*/
+.navbar {
+    overflow: hidden;
+    background-color: #333333;
+}
+
+/* Style navigation bar links */
+.navbar a {
+    float: left; /*make sure links stay side-by-side*/
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Navigation on the right-hand side*/
+.navbar a.right {
+    float: right;
+}
+
+/*Change color of box on mouse-over*/
+.navbar a:hover {
+    background-color: #dddddd;
+    color: black;
+}
+
+/* Content Boxes */
+* {
+    box-sizing: border-box;
+}
+
+#art {
+    width: 30%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: calc(10% / 6);
+}
+#art:hover {
+    border-color: black;
+    color: white;
+    /* box-shadow: x-offset| y-offset| blur-radius| spread-radius| color */
+    box-shadow: 0 0.5em 0.5em -0.4em black;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#profile {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: calc(10% / 6);
+}
+
+#SlideShowContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    overflow: hidden;
+    border: 1px solid black;
+    margin: calc(10% / 6);
+}
+
+/* Adapt Website screen to any changes on browser window size */
+
+/* Change screen arrangement to column when window's width reach 700px */
+@media screen and (max-width: 991px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Minimum window's width */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+.footer {
+    padding: 20px;
+    text-align: right;
+    background: cadetblue;
+}

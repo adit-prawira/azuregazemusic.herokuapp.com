@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../css/musicDetails.css" />
+        <link rel="stylesheet" href="../css/appMusicPlayer.css" />
+        <%- include('style') %>
+    </head>
+    <body id="wander">
+        <%- include('navbar') %>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/Single_.png" alt="..." />
+                </div>
+
+                <div class="col">
+                    <h2>Wander</h2>
+                    <div class="container-audio mb-3">
+                        <label>1. Wander</label>
+                        <div id="graph-wander" class="container-audio">
+                            <%- include('bar-animation') %>
+                        </div>
+                        <audio controls controlsList="nodownload">
+                            <source
+                                src="Audio/lauren final.wav"
+                                type="audio/ogg"
+                            />
+                        </audio>
+                    </div>
+                    <div class="container-audio">
+                        <label>2. Pluie de la Ville</label>
+                        <div id="graph-wander" class="container-audio">
+                            <%- include('bar-animation') %>
+                        </div>
+                        <audio controls controlsList="nodownload">
+                            <source
+                                src="Audio/pluie de la ville final SERIOUSLY.wav"
+                                type="audio/ogg"
+                            />
+                        </audio>
+                    </div>
+                </div>
+                <a class="btn btn-success mt-5" href="/">Back to Main Page</a>
+            </div>
+        </div>
+        <%- include('footer') %>
+    </body>
+</html>

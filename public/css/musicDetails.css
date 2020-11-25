@@ -1,0 +1,14 @@
+.container {
+    margin: calc(10% / 6);
+}
+img {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    display: flex;
+}
+
+#details {
+    box-sizing: border-box;
+    margin: calc(10% / 6);
+}
