@@ -34,7 +34,7 @@
 
 #sleep {
     font-family: Geneva, Geneva, sans-serif;
-    background: linear-gradient(to left, rgb(8, 9, 110), rgb(32, 36, 255));
+    background: linear-gradient(to left, rgb(68, 97, 177), rgb(98, 140, 255));
     align-content: center;
 }
 /* .col {
@@ -70,7 +70,10 @@ label {
     color: azure;
     filter: contrast(2);
 }
-
+#review-label {
+    color: black;
+    padding-left: 2px;
+}
 .container-audio {
     border-radius: 5px;
     background-color: #0800308c;
@@ -84,7 +87,7 @@ label {
     align-content: center;
     height: 5rem;
     border-radius: 5px;
-    background: center/cover url("../Images/IMG_0273.png");
+    background: center/cover url("../Images/cold-morning.PNG");
     color: #444;
     margin: calc(10% / 6);
     overflow: hidden;
@@ -104,7 +107,7 @@ label {
     align-content: center;
     height: 3rem;
     border-radius: 5px;
-    background: center/cover url("../Images/Night Walk.png");
+    background: center/cover url("../Images/city-night-walk.png");
     color: #444;
     margin: calc(10% / 6);
     overflow: hidden;
@@ -114,7 +117,7 @@ label {
     align-content: center;
     height: 5rem;
     border-radius: 5px;
-    background: center/cover url("../Images/IMG_0125.png");
+    background: center/cover url("../Images/springtime.PNG");
     color: #444;
     margin: calc(10% / 6);
     overflow: hidden;
@@ -124,7 +127,7 @@ label {
     align-content: center;
     height: 5rem;
     border-radius: 5px;
-    background: center/cover url("../Images/Single_.png");
+    background: center/cover url("../Images/wander.png");
     color: #444;
     margin: calc(10% / 6);
     overflow: hidden;
@@ -134,7 +137,7 @@ label {
     align-content: center;
     height: 5rem;
     border-radius: 5px;
-    background: center/cover url("../Images/Sleep_Deprived.png");
+    background: center/cover url("../Images/sleep-deprived.png");
     color: #444;
     margin: calc(10% / 6);
     overflow: hidden;

@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="Images/IMG_0273.png" alt="..." />
+                    <img src="Images/cold-morning.png" alt="..." />
                 </div>
 
                 <div class="col">
@@ -50,6 +50,46 @@
                             />
                         </audio>
                     </div>
+                </div>
+                <div class="row">
+                    <h3 class="mt-3">Comments/Reviews</h3>
+                    <form
+                        class="mb-3 validated-form"
+                        action="/cold-morning/reviews"
+                        method="POST"
+                        novalidate
+                    >
+                        <div class="mb-3">
+                            <label
+                                id="review-label"
+                                class="form-label"
+                                for="author"
+                                >Author (optional):</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="review[author]"
+                                id="author"
+                            />
+                        </div>
+                        <div class="mb-3">
+                            <label
+                                id="review-label"
+                                class="form-label"
+                                for="body"
+                                >Comments/Reviews:</label
+                            >
+                            <textarea
+                                class="form-control"
+                                name="review[body]"
+                                id=""
+                                cols="30"
+                                rows="3"
+                                required
+                            ></textarea>
+                        </div>
+                    </form>
                 </div>
                 <a class="btn btn-success mt-5" href="/">Back to Main Page</a>
             </div>

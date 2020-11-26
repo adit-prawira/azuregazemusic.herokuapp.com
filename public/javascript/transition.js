@@ -32,7 +32,16 @@ function autoChange() {
             container.style.backgroundColor = "rgb(99,147,122)";
             break;
         case 5:
-            container.style.backgroundColor = "rgb(8,9,110)";
+            container.style.backgroundColor = "rgb(68,97,177)";
+            break;
+        case 6:
+            container.style.backgroundColor = "rgb(198,212,165)";
+            break;
+        case 7:
+            container.style.backgroundColor = "rgb(159,183,240)";
+            break;
+        case 8:
+            container.style.backgroundColor = "rgb(11,15,40)";
             break;
         default:
             container.style.backgroundColor = "#fffefe";

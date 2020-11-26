@@ -4,10 +4,14 @@ i {
 body {
     font-family: Geneva, Geneva, sans-serif;
 }
+
+h6 {
+    font-family: Geneva, Geneva, sans-serif;
+}
 .header {
     padding: 80px;
     text-align: center;
-    background: center/cover url("../Images/Single_Cover.png");
+    background: center/cover url("../Images/cover.png");
     color: black;
 }
 .header h1 {
