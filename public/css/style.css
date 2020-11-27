@@ -87,6 +87,13 @@ h6 {
     margin: calc(10% / 6);
 }
 
+#error-sign {
+    border-color: rgb(244, 220, 221);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
 /* Adapt Website screen to any changes on browser window size */
 
 /* Change screen arrangement to column when window's width reach 700px */

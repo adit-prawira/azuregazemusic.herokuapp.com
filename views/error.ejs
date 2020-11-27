@@ -14,27 +14,17 @@
         <link rel="stylesheet" href="../css/appMusicPlayer.css" />
         <%- include('style') %>
     </head>
-    <body id="waterfall">
+    <body>
         <%- include('navbar') %>
-        <div class="container">
+        <div class="container modal-body">
             <div class="row">
-                <div class="col">
-                    <img src="Images/waterfall.png" alt="..." />
-                </div>
-
-                <div class="col">
-                    <h2>waterfall</h2>
-                    <div class="container-audio">
-                        <label>1. waterfall</label>
-                        <div id="graph-waterfall" class="container-audio">
-                            <%- include('bar-animation') %>
-                        </div>
-                        <audio controls controlsList="nodownload">
-                            <source
-                                src="Audio/waterfall.mp3"
-                                type="audio/ogg"
-                            />
-                        </audio>
+                <div class="col-6 offset-3">
+                    <div class="alert alert-danger text-center" role="alert">
+                        <h4 class="alert-heading"><%= err.message %></h4>
+                        <img
+                            id="error-sign"
+                            src="https://img.icons8.com/officel/100/000000/error.png"
+                        />
                     </div>
                 </div>
                 <a class="btn btn-success mt-5" href="/">Back to Main Page</a>
