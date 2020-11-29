@@ -7,7 +7,7 @@ const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError");
 const Album = require("./models/album");
 const Review = require("./models/review");
-const { AlbumSchema, ReviewSchema } = require("./schemas");
+const { AlbumSchema, ReviewSchema } = require("./schemas.js");
 const catchAsync = require("./utils/catchAsync");
 
 app.engine("ejs", ejsMate);
@@ -48,29 +48,52 @@ app.get(
     "/:name",
     catchAsync(async (req, res) => {
         const { name } = req.params;
-        const album = await Album.find({ name });
-        const albumDat = album[0]; //.populate("reviews");
+        console.log(req.params);
+        const album = await Album.find({ name }).populate("reviews");
+        const albumDat = album[0];
         console.log(albumDat);
         // const allAlbums = (await Album.find()).map((item) => item.name);
         const albumName = album[0].name;
         if (!album) {
             res.redirect("/");
         }
+        // albumDat.reviews = [];
+        // await albumDat.save();
         res.render(albumName, { albumDat });
     })
 );
 
 app.post(
-    "/",
-    validateReview,
+    "/:name/reviews",
     catchAsync(async (req, res) => {
         const { name } = req.params;
-        const album = await Album.find({ name });
+        const album = (await Album.find({ name }))[0];
         const review = new Review(req.body.review);
-        album[0].reviews.push(review);
+
+        album.reviews.push(review);
         await review.save();
         await album.save();
-        res.redirect(`/${album[0].name}`);
+
+        res.redirect(`/${album.name}`);
+    })
+);
+
+app.delete(
+    "/:name/reviews/:reviewId",
+    catchAsync(async (req, res) => {
+        const { name, reviewId } = req.params;
+        console.log(req.params);
+        console.log(
+            await Album.findOneAndUpdate(
+                { name },
+                {
+                    $pull: { reviews: reviewId },
+                }
+            )
+        );
+
+        await Review.findByIdAndDelete(reviewId);
+        res.redirect(`/${name}`);
     })
 );
 
