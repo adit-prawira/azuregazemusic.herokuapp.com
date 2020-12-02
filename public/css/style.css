@@ -1,13 +1,14 @@
 i {
     color: white;
 }
-body {
+
+body,
+h6,
+a {
+    font-size: 100%;
     font-family: Geneva, Geneva, sans-serif;
 }
 
-h6 {
-    font-family: Geneva, Geneva, sans-serif;
-}
 .header {
     padding: 80px;
     text-align: center;
@@ -20,27 +21,11 @@ h6 {
 
 /*style top navigation bar*/
 .navbar {
-    overflow: hidden;
     background-color: #333333;
 }
 
-/* Style navigation bar links */
-.navbar a {
-    float: left; /*make sure links stay side-by-side*/
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-
-/* Navigation on the right-hand side*/
-.navbar a.right {
-    float: right;
-}
-
 /*Change color of box on mouse-over*/
-.navbar a:hover {
+.nav-link:hover {
     background-color: #dddddd;
     color: black;
 }
@@ -94,11 +79,83 @@ h6 {
     margin-right: auto;
     width: 30%;
 }
-/* Adapt Website screen to any changes on browser window size */
 
+.footer {
+    padding: 20px;
+    text-align: right;
+    background: cadetblue;
+}
+
+#register-login-container {
+    border-radius: 25px;
+    border-width: 1px;
+    border-style: solid;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-content: center;
+}
+
+#register-login-container .mb-3 {
+    display: block;
+    margin: auto;
+}
+
+#register-login-container .btn {
+    display: block;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    background: linear-gradient(to left, #00cc8fa8, #00ffb39d);
+    box-shadow: 0 0.5em 0.5em -0.4em black;
+}
+#register-login-container #cancel {
+    background: linear-gradient(to left, #dd0025a8, #ff3c5da8);
+}
+
+#register-login-container #cancel:hover {
+    background: linear-gradient(to left, #630010a8, #ee0028a8);
+    cursor: pointer;
+}
+
+#register-login-container #cancel:active {
+    transform: translateY(4px);
+    cursor: pointer;
+}
+
+#register-login-container .btn:hover {
+    background: linear-gradient(to left, #01b37da8, #00d1929d);
+    cursor: pointer;
+}
+
+#register-login-container .btn:active,
+#cancel:active {
+    transform: translateY(4px);
+    cursor: pointer;
+}
+
+#register-login-container h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Adapt Website screen to any changes on browser window size */
 /* Change screen arrangement to column when window's width reach 700px */
 @media screen and (max-width: 991px) {
     .row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1054px) {
+    #social,
+    #owner {
         flex-direction: column;
     }
 }
@@ -109,10 +166,4 @@ h6 {
         float: none;
         width: 100%;
     }
-}
-
-.footer {
-    padding: 20px;
-    text-align: right;
-    background: cadetblue;
 }

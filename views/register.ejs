@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Register</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <%- include('style') %>
+    </head>
+    <body>
+        <%- include('navbar') %>
+        <div id="register-login-container" class="container">
+            <h2>Register</h2>
+            <form
+                action="/register"
+                method="POST"
+                class="validated-form"
+                novalidate
+            >
+                <!-- Username registration form  -->
+                <div class="mb-3">
+                    <label class="form-label" for="username">Username:</label>
+                    <input
+                        class="form-control"
+                        type="text"
+                        id="username"
+                        name="username"
+                        required
+                    />
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+
+                <!-- Email registration form  -->
+                <div class="mb-3">
+                    <label class="form-label" for="username">Email:</label>
+                    <input
+                        class="form-control"
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    />
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+
+                <!-- Password registration form  -->
+                <div class="mb-3">
+                    <label class="form-label" for="username">Password:</label>
+                    <input
+                        class="form-control"
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                    />
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+
+                <button class="btn bg-success">Submit</button>
+            </form>
+            <a href="/" id="cancel" class="btn">Cancel</a>
+        </div>
+        <%- include('footer') %>
+    </body>
+</html>
