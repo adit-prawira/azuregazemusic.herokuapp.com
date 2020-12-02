@@ -1,22 +1,29 @@
+//Require all required libraries
 const express = require("express");
 const app = express();
 const path = require("path");
-
 const mongoose = require("mongoose");
-
 const ejsMate = require("ejs-mate");
-
 const methodOverride = require("method-override");
+
+//Require error handling class
 const ExpressError = require("./utils/ExpressError");
 
+//Require all routes
 const albumsRoutes = require("./routes/albums");
 const reviewRoutes = require("./routes/reviews");
+
+//Require flash and session
+const flash = require("connect-flash");
+const session = require("express-session");
+const { use } = require("passport");
 
 app.engine("ejs", ejsMate);
 mongoose.connect("mongodb://localhost:27017/AzureGazeMusic", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,
 });
 
 const db = mongoose.connection;
@@ -31,7 +38,30 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-//Review middleware
+//Create cookies and session will expire in a week (converted in milliseconds)
+const sessionConfig = {
+    secret: "thisshouldbeasecret",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        //Adding extra security
+        htttpOnly: true,
+        expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+    },
+};
+app.use(flash());
+app.use(session(sessionConfig));
+
+//Creating Flash middleware
+app.use((req, res, next) => {
+    console.log(req.session);
+
+    //Add for users later
+    res.locals.success = req.flash("success");
+    res.locals.error = req.flash("error");
+    next();
+});
 
 app.get("/", (req, res) => {
     res.render("main");

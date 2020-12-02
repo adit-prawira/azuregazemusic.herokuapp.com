@@ -25,6 +25,7 @@ router.post(
         await review.save();
         await album.save();
 
+        req.flash("success", "Successfully created a review");
         res.redirect(`/${album.name}`);
     })
 );
@@ -44,6 +45,7 @@ router.delete(
         );
 
         await Review.findByIdAndDelete(reviewId);
+        req.flash("success", "Successfully deleted your review");
         res.redirect(`/${name}`);
     })
 );
