@@ -10,16 +10,16 @@
         <title>Wander</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="../css/musicDetails.css" />
-        <link rel="stylesheet" href="../css/appMusicPlayer.css" />
-        <%- include('style') %>
+        <link rel="stylesheet" href="../../css/musicDetails.css" />
+        <link rel="stylesheet" href="../../css/appMusicPlayer.css" />
+        <%- include('../partials/style') %>
     </head>
     <body id="wander">
-        <%- include('navbar') %>
+        <%- include('../partials/navbar') %>
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="Images/wander.png" alt="..." />
+                    <img src="../Images/wander.png" alt="..." />
                 </div>
 
                 <div class="col">
@@ -27,28 +27,31 @@
                     <div class="container-audio mb-3">
                         <label>1. Wander</label>
                         <div id="graph-wander" class="container-audio">
-                            <%- include('bar-animation') %>
+                            <%- include('../animations/bar-animation') %>
                         </div>
                         <audio controls controlsList="nodownload">
-                            <source src="Audio/wander.wav" type="audio/ogg" />
+                            <source
+                                src="../Audio/wander.wav"
+                                type="audio/ogg"
+                            />
                         </audio>
                     </div>
                     <div class="container-audio">
                         <label>2. Pluie de la Ville</label>
                         <div id="graph-wander" class="container-audio">
-                            <%- include('bar-animation') %>
+                            <%- include('../animations/bar-animation') %>
                         </div>
                         <audio controls controlsList="nodownload">
                             <source
-                                src="Audio/pluie de la ville.wav"
+                                src="../Audio/pluie de la ville.wav"
                                 type="audio/ogg"
                             />
                         </audio>
                     </div>
                 </div>
-                <%- include('reviews') %>
+                <%- include('../partials/reviews') %>
             </div>
         </div>
-        <%- include('footer') %>
+        <%- include('../partials/footer') %>
     </body>
 </html>

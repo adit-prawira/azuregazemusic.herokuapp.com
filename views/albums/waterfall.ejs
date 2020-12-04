@@ -7,39 +7,39 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Sleep Deprived</title>
+        <title>waterfall</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="../css/musicDetails.css" />
-        <link rel="stylesheet" href="../css/appMusicPlayer.css" />
-        <%- include('style') %>
+        <link rel="stylesheet" href="../../css/musicDetails.css" />
+        <link rel="stylesheet" href="../../css/appMusicPlayer.css" />
+        <%- include('../partials/style') %>
     </head>
-    <body id="sleep">
-        <%- include('navbar') %>
+    <body id="waterfall">
+        <%- include('../partials/navbar') %>
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="Images/sleep-deprived.png" alt="..." />
+                    <img src="../Images/waterfall.png" alt="..." />
                 </div>
 
                 <div class="col">
-                    <h2 id="sleep-title">Sleep Deprived</h2>
+                    <h2>waterfall</h2>
                     <div class="container-audio">
-                        <label>1. Sleep Deprived</label>
-                        <div id="graph-sleep" class="container-audio">
-                            <%- include('bar-animation') %>
+                        <label>1. waterfall</label>
+                        <div id="graph-waterfall" class="container-audio">
+                            <%- include('../animations/bar-animation') %>
                         </div>
                         <audio controls controlsList="nodownload">
                             <source
-                                src="Audio/sleep deprived.wav"
+                                src="../Audio/waterfall.mp3"
                                 type="audio/ogg"
                             />
                         </audio>
                     </div>
                 </div>
-                <%- include('reviews') %>
+                <%- include('../partials/reviews') %>
             </div>
         </div>
-        <%- include('footer') %>
+        <%- include('../partials/footer') %>
     </body>
 </html>

@@ -12,15 +12,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="../css/musicDetails.css" />
         <link rel="stylesheet" href="../css/appMusicPlayer.css" />
-        <%- include('style') %>
+        <%- include('../partials/style') %>
     </head>
     <body id="cold-morning">
-        <%- include('navbar') %>
+        <%- include('../partials/navbar') %>
 
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="Images/cold-morning.png" alt="..." />
+                    <img src="../Images/cold-morning.png" alt="..." />
                 </div>
 
                 <div class="col">
@@ -30,11 +30,11 @@
                             >1. walking through the cold morning breeze</label
                         >
                         <div id="graph-cold-morning" class="container-audio">
-                            <%- include('bar-animation') %>
+                            <%- include('../animations/bar-animation') %>
                         </div>
                         <audio controls controlsList="nodownload">
                             <source
-                                src="Audio/walking through the cool morning breeze.mp3"
+                                src="../Audio/walking through the cool morning breeze.mp3"
                                 type="audio/ogg"
                             />
                         </audio>
@@ -42,20 +42,20 @@
                     <div class="container-audio">
                         <label>2. meet her at the station</label>
                         <div id="graph-cold-morning" class="container-audio">
-                            <%- include('bar-animation') %>
+                            <%- include('../animations/bar-animation') %>
                         </div>
                         <audio controls controlsList="nodownload">
                             <source
-                                src="Audio/met her at the station.mp3"
+                                src="../Audio/met her at the station.mp3"
                                 type="audio/ogg"
                             />
                         </audio>
                     </div>
                 </div>
-                <%- include('reviews') %>
+                <%- include('../partials/reviews') %>
             </div>
         </div>
 
-        <%- include('footer') %>
+        <%- include('../partials/footer') %>
     </body>
 </html>

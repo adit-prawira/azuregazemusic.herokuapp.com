@@ -44,7 +44,7 @@
 .row {
     display: flex;
 }
-a {
+/* a {
     color: #0800308c;
 }
 
@@ -52,7 +52,7 @@ a:hover {
     box-shadow: 0 0.5em 0.5em -0.4em black;
     transform: translateY(-0.25em);
     cursor: pointer;
-}
+} */
 
 h2 {
     margin-top: 10px;

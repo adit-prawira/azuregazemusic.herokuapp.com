@@ -19,7 +19,7 @@
             rel="stylesheet"
         />
         <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet" />
-        <%- include('style') %>
+        <%- include('./partials/style') %>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -28,7 +28,7 @@
                 <a href="#">upgrade your browser</a> to improve your experience.
             </p>
         <![endif]-->
-        <%- include('navbar') %>
+        <%- include('./partials/navbar') %>
         <section align="center">
             <img id="profile" src="Images/profile.png" alt="..." />
         </section>
@@ -119,7 +119,7 @@
                 style="height: 100%"
             />
         </section>
-        <%- include('footer') %>
+        <%- include('./partials/footer') %>
         <script src="javascripts/redirect.js"></script>
         <script src="../javascripts/transition.js" async defer></script>
     </body>

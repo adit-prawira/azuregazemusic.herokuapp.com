@@ -12,11 +12,16 @@ const ExpressError = require("./utils/ExpressError");
 //Require all routes
 const albumsRoutes = require("./routes/albums");
 const reviewRoutes = require("./routes/reviews");
+const userRoutes = require("./routes/users");
 
 //Require flash and session
 const flash = require("connect-flash");
 const session = require("express-session");
-const { use } = require("passport");
+
+//Require authentication libraries
+const passport = require("passport");
+const LocalStrategy = require("passport-local");
+const User = require("./models/user");
 
 app.engine("ejs", ejsMate);
 mongoose.connect("mongodb://localhost:27017/AzureGazeMusic", {
@@ -32,11 +37,13 @@ db.once("open", () => {
     console.log("Mongo database connected");
 });
 
+app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, "public")));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+app.use(express.static(path.join(__dirname, "public")));
 
 //Create cookies and session will expire in a week (converted in milliseconds)
 const sessionConfig = {
@@ -52,12 +59,15 @@ const sessionConfig = {
 };
 app.use(flash());
 app.use(session(sessionConfig));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
 
 //Creating Flash middleware
 app.use((req, res, next) => {
-    console.log(req.session);
+    // console.log(req.session);
 
-    //Add for users later
+    res.locals.currentUser = req.session;
     res.locals.success = req.flash("success");
     res.locals.error = req.flash("error");
     next();
@@ -67,14 +77,7 @@ app.get("/", (req, res) => {
     res.render("main");
 });
 
-app.get("/register", async (req, res, next) => {
-    res.render("register");
-});
-
-app.get("/login", async (req, res, next) => {
-    res.render("login");
-});
-
+app.use("/", userRoutes);
 app.use("/", albumsRoutes);
 app.use("/:name/reviews", reviewRoutes);
 

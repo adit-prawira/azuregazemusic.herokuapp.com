@@ -10,16 +10,16 @@
         <title>City Night Walk</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="../css/musicDetails.css" />
-        <link rel="stylesheet" href="../css/appMusicPlayer.css" />
-        <%- include('style') %>
+        <link rel="stylesheet" href="../../css/musicDetails.css" />
+        <link rel="stylesheet" href="../../css/appMusicPlayer.css" />
+        <%- include('../partials/style') %>
     </head>
     <body id="city-night">
-        <%- include('navbar') %>
+        <%- include('../partials/navbar') %>
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="Images/city-night-walk.png" alt="..." />
+                    <img src="../Images/city-night-walk.png" alt="..." />
                 </div>
 
                 <div class="col">
@@ -27,11 +27,11 @@
                     <div class="container-audio mb-3">
                         <label>1. city night walk</label>
                         <div id="graph-city-night" class="container-audio">
-                            <%- include('bar-animation') %>
+                            <%- include('../animations/bar-animation') %>
                         </div>
                         <audio controls controlsList="nodownload">
                             <source
-                                src="Audio/city night walk.mp3"
+                                src="../Audio/city night walk.mp3"
                                 type="audio/ogg"
                             />
                         </audio>
@@ -39,11 +39,11 @@
                     <div class="container-audio">
                         <label>2. on the way home</label>
                         <div id="graph-city-night" class="container-audio">
-                            <%- include('bar-animation') %>
+                            <%- include('../animations/bar-animation') %>
                         </div>
                         <audio controls controlsList="nodownload">
                             <source
-                                src="Audio/on the way home.mp3"
+                                src="../Audio/on the way home.mp3"
                                 type="audio/ogg"
                             />
                         </audio>
@@ -51,19 +51,19 @@
                     <div class="container-audio">
                         <label>3. suddenly sleepy</label>
                         <div id="graph-city-night" class="container-audio">
-                            <%- include('bar-animation') %>
+                            <%- include('../animations/bar-animation') %>
                         </div>
                         <audio controls controlsList="nodownload">
                             <source
-                                src="Audio/suddenly sleepy.mp3"
+                                src="../Audio/suddenly sleepy.mp3"
                                 type="audio/ogg"
                             />
                         </audio>
                     </div>
                 </div>
-                <%- include('reviews') %>
+                <%- include('../partials/reviews') %>
             </div>
         </div>
-        <%- include('footer') %>
+        <%- include('../partials/footer') %>
     </body>
 </html>
