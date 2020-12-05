@@ -13,14 +13,8 @@
         <%- include('./partials/style.ejs') %>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">
-                You are using an <strong>outdated</strong> browser. Please
-                <a href="#">upgrade your browser</a> to improve your experience.
-            </p>
-        <![endif]-->
         <%- include('./partials/navbar') %>
-        <section align="center">
+        <section id="prof">
             <img id="profile" src="Images/profile.png" alt="..." />
         </section>
 
@@ -63,53 +57,22 @@
         /><img onclick="" id="art" src="Images/blue-nostalgia.png" alt="..." />
 
         <section id="SlideShowContainer">
-            <img
-                class="SlideShow"
-                src="Images/cold-morning.PNG"
-                style="height: 100%"
-            />
+            <img id="slide" class="SlideShow" src="Images/cold-morning.PNG" />
 
+            <img id="slide" class="SlideShow" src="Images/waterfall.PNG" />
             <img
-                class="SlideShow"
-                src="Images/waterfall.PNG"
-                style="height: 100%"
-            />
-            <img
+                id="slide"
                 class="SlideShow"
                 src="Images/city-night-walk.png"
-                style="height: 100%"
             />
-            <img
-                class="SlideShow"
-                src="Images/springtime.PNG"
-                style="height: 100%"
-            />
-            <img
-                class="SlideShow"
-                src="Images/wander.png"
-                style="height: 100%"
-            />
-            <img
-                class="SlideShow"
-                src="Images/sleep-deprived.png"
-                style="height: 100%"
-            />
-            <img
-                class="SlideShow"
-                src="Images/reminiscing.png"
-                style="height: 100%"
-            />
-            <img
-                class="SlideShow"
-                src="Images/hey-there.png"
-                style="height: 100%"
-            />
-            <img
-                class="SlideShow"
-                src="Images/blue-nostalgia.png"
-                style="height: 100%"
-            />
+            <img id="slide" class="SlideShow" src="Images/springtime.PNG" />
+            <img id="slide" class="SlideShow" src="Images/wander.png" />
+            <img id="slide" class="SlideShow" src="Images/sleep-deprived.png" />
+            <img id="slide" class="SlideShow" src="Images/reminiscing.png" />
+            <img id="slide" class="SlideShow" src="Images/hey-there.png" />
+            <img id="slide" class="SlideShow" src="Images/blue-nostalgia.png" />
         </section>
+
         <%- include('./partials/footer') %>
         <script src="javascripts/redirect.js"></script>
         <script src="../javascripts/transition.js" async defer></script>
