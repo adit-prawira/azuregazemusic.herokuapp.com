@@ -49,6 +49,16 @@ a {
     transform: translateY(-0.25em);
     cursor: pointer;
 }
+#SlideShowContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    overflow: hidden;
+    border: 1px solid black;
+    margin: calc(10% / 6);
+}
 .center {
     display: block;
     margin-left: auto;
@@ -62,16 +72,6 @@ a {
     margin: calc(10% / 6);
 }
 
-#SlideShowContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    overflow: hidden;
-    border: 1px solid black;
-    margin: calc(10% / 6);
-}
-
 #error-sign {
     border-color: rgb(244, 220, 221);
     display: block;
@@ -81,9 +81,11 @@ a {
 }
 
 .footer {
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: right;
     text-align: right;
-    background: cadetblue;
+    background: bottom/cover url("../Images/cover.png");
 }
 
 #register-login-container {
@@ -92,9 +94,10 @@ a {
     border-style: solid;
     width: 50%;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     align-content: center;
+    box-shadow: 0 0.5em 0.5em -0.4em black;
 }
 
 #register-login-container .mb-3 {
@@ -103,18 +106,25 @@ a {
 }
 
 #register-login-container .btn {
-    display: block;
     font-size: 20px;
-    justify-content: center;
-    align-items: center;
     border-radius: 50px;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 100%;
     background: linear-gradient(to left, #00cc8fa8, #00ffb39d);
     box-shadow: 0 0.5em 0.5em -0.4em black;
 }
+
+#back-to-main {
+    border-style: solid;
+    border-color: rgb(90, 90, 90);
+    border-radius: 50px;
+    background: linear-gradient(to left, #cc008fa8, #ff2abfa8);
+}
+#back-to-main:hover {
+    background: linear-gradient(to left, #6e004da8, #d40095a8);
+}
+
 #register-login-container #cancel {
     background: linear-gradient(to left, #dd0025a8, #ff3c5da8);
 }
@@ -140,6 +150,13 @@ a {
     cursor: pointer;
 }
 
+#submit {
+    border-radius: 50px;
+    background: #00c096a8;
+}
+#submit:hover {
+    background: #003a2da8;
+}
 #register-login-container h2 {
     padding: 20px;
     text-align: center;

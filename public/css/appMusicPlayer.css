@@ -1,7 +1,7 @@
 #cold-morning {
     font-family: Geneva, Geneva, sans-serif;
     background: linear-gradient(to left, #00a775b2, #00ffb39d);
-    align-content: center;
+    /* align-content: center; */
 }
 
 #waterfall {
@@ -37,22 +37,10 @@
     background: linear-gradient(to left, rgb(68, 97, 177), rgb(98, 140, 255));
     align-content: center;
 }
-/* .col {
-    border-style: solid;
-    border-color: black;
-} */
+
 .row {
     display: flex;
 }
-/* a {
-    color: #0800308c;
-}
-
-a:hover {
-    box-shadow: 0 0.5em 0.5em -0.4em black;
-    transform: translateY(-0.25em);
-    cursor: pointer;
-} */
 
 h2 {
     margin-top: 10px;

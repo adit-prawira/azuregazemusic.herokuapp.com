@@ -5,7 +5,7 @@ module.exports.postReview = async (req, res) => {
     const { name } = req.params;
     const album = (await Album.find({ name }))[0];
     const review = new Review(req.body.review);
-
+    review.author = req.user._id;
     album.reviews.push(review);
     await review.save();
     await album.save();
@@ -16,14 +16,11 @@ module.exports.postReview = async (req, res) => {
 
 module.exports.deleteReview = async (req, res) => {
     const { name, reviewId } = req.params;
-    console.log(req.params);
-    console.log(
-        await Album.findOneAndUpdate(
-            { name },
-            {
-                $pull: { reviews: reviewId },
-            }
-        )
+    await Album.findOneAndUpdate(
+        { name },
+        {
+            $pull: { reviews: reviewId },
+        }
     );
 
     await Review.findByIdAndDelete(reviewId);

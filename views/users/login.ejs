@@ -14,44 +14,49 @@
     </head>
     <body>
         <%- include('../partials/navbar') %>
-        <div id="register-login-container" class="container">
-            <h2>Login</h2>
-            <form
-                action="/login"
-                method="POST"
-                class="validated-form"
-                novalidate
-            >
-                <!-- Username registration form  -->
-                <div class="mb-3">
-                    <label class="form-label" for="username">Username:</label>
-                    <input
-                        class="form-control"
-                        type="text"
-                        id="username"
-                        name="username"
-                        required
-                    />
-                    <div class="valid-feedback">Looks good!</div>
-                </div>
+        <main class="container mt-5">
+            <div id="register-login-container" class="container">
+                <h2>Login</h2>
+                <form
+                    action="/login"
+                    method="POST"
+                    class="validated-form"
+                    novalidate
+                >
+                    <!-- Username registration form  -->
+                    <div class="mb-3">
+                        <label class="form-label" for="username"
+                            >Username:</label
+                        >
+                        <input
+                            class="form-control"
+                            type="text"
+                            id="username"
+                            name="username"
+                            required
+                        />
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
 
-                <!-- Password registration form  -->
-                <div class="mb-3">
-                    <label class="form-label" for="username">Password:</label>
-                    <input
-                        class="form-control"
-                        type="password"
-                        id="password"
-                        name="password"
-                        required
-                    />
-                    <div class="valid-feedback">Looks good!</div>
-                </div>
-
-                <button class="btn bg-success">Login</button>
-            </form>
-            <a href="/" id="cancel" class="btn">Cancel</a>
-        </div>
+                    <!-- Password registration form  -->
+                    <div class="mb-3">
+                        <label class="form-label" for="username"
+                            >Password:</label
+                        >
+                        <input
+                            class="form-control"
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                        />
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <button class="btn bg-success btn-block">Login</button>
+                </form>
+                <a href="/" id="cancel" class="btn btn-block">Cancel</a>
+            </div>
+        </main>
         <%- include('../partials/footer') %>
     </body>
 </html>

@@ -30,6 +30,42 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="/"
+                    ><svg
+                        class="mr-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="50"
+                        height="50"
+                        viewBox="0 0 172 172"
+                        style="fill: #000000"
+                    >
+                        <g
+                            fill="none"
+                            fill-rule="nonzero"
+                            stroke="none"
+                            stroke-width="1"
+                            stroke-linecap="butt"
+                            stroke-linejoin="miter"
+                            stroke-miterlimit="10"
+                            stroke-dasharray=""
+                            stroke-dashoffset="0"
+                            font-family="none"
+                            font-weight="none"
+                            font-size="none"
+                            text-anchor="none"
+                            style="mix-blend-mode: normal"
+                        >
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ffffff">
+                                <path
+                                    d="M132.30769,13.4375c-3.64363,0 -6.61538,2.97176 -6.61538,6.61538v31.62981l-34.9375,-34.9375c-2.58413,-2.58413 -6.92548,-2.58413 -9.50962,0l-77.52404,77.73077c-2.58413,2.58413 -2.58413,6.71875 0,9.30288c2.58413,2.58413 6.71875,2.58413 9.30288,0l72.97596,-72.97596l73.18269,73.18269c1.29207,1.29207 3.04928,2.06731 4.75481,2.06731c1.70553,0 3.25601,-0.77524 4.54808,-2.06731c2.58413,-2.58413 2.58413,-6.71875 0,-9.30288l-22.94712,-22.94712v-51.68269c0,-3.64363 -2.97176,-6.61538 -6.61538,-6.61538zM86,43l-72.76923,72.76923v36.38462c0,10.95673 8.88942,19.84615 19.84615,19.84615h105.84615c10.95673,0 19.84615,-8.88942 19.84615,-19.84615v-36.38462zM72.76923,105.84615h26.46154c3.64363,0 6.61538,2.97176 6.61538,6.61538v39.69231c0,3.64363 -2.97176,6.61538 -6.61538,6.61538h-26.46154c-3.64363,0 -6.61538,-2.97176 -6.61538,-6.61538v-39.69231c0,-3.64363 2.97176,-6.61538 6.61538,-6.61538z"
+                                ></path>
+                            </g>
+                        </g></svg
+                    >Home</a
+                >
                 <a
                     class="nav-link active"
                     aria-current="page"
@@ -223,10 +259,12 @@
                 >
             </div>
             <div class="navbar-nav ml-auto">
-                <a id="owner" class="nav-link active" href="/login">Login</a>
-                <a id="owner" class="nav-link active" href="/register"
-                    >Register</a
-                >
+                <% if(!currentUser) {%>
+                <a class="nav-link active" href="/login">Login</a>
+                <a class="nav-link active" href="/register">Register</a>
+                <% } else {%>
+                <a class="nav-link active" href="/logout">Logout</a>
+                <% } %>
             </div>
         </div>
     </div>
