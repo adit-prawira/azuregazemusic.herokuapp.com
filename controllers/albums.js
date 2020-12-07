@@ -18,5 +18,13 @@ module.exports.showAlbum = async (req, res) => {
     }
     // albumDat.reviews = [];
     // await albumDat.save();
-    res.render(`albums/${albumName}`, { albumDat });
+    const albumTitle = albumDat.name
+        .replace(/-/g, " ")
+        .split(" ")
+        .map((st) => st.replace(st.charAt(0), st.charAt(0).toUpperCase()))
+        .join(" ");
+
+    console.log(albumDat);
+    // res.render(`albums/${albumName}`, { albumDat });
+    res.render("albums/show", { albumDat, albumTitle });
 };

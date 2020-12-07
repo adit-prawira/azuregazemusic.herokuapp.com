@@ -13,6 +13,7 @@ module.exports.register = async (req, res, next) => {
             if (err) return next(err);
             req.flash("success", "Welcome to Azure Gaze's Website");
             res.redirect("/");
+            use;
         });
     } catch (e) {
         req.flash("error", e.message);

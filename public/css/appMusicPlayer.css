@@ -1,41 +1,41 @@
+.container {
+    /* font-family: Geneva, Geneva, sans-serif; */
+    font-family: Raleway, sans-serif;
+}
+
 #cold-morning {
-    font-family: Geneva, Geneva, sans-serif;
     background: linear-gradient(to left, #00a775b2, #00ffb39d);
-    /* align-content: center; */
 }
 
 #waterfall {
-    font-family: Geneva, Geneva, sans-serif;
     background: linear-gradient(to left, rgb(221, 221, 221), white);
-    align-content: center;
 }
 
-#city-night {
-    font-family: Geneva, Geneva, sans-serif;
+#city-night-walk {
     background: linear-gradient(to left, rgb(99, 137, 141), rgb(182, 248, 255));
-    align-content: center;
 }
 
 #springtime {
-    font-family: Geneva, Geneva, sans-serif;
     background: linear-gradient(
         to left,
         rgb(216, 191, 164),
         rgb(252, 239, 225)
     );
-    align-content: center;
 }
 
 #wander {
-    font-family: Geneva, Geneva, sans-serif;
     background: linear-gradient(to left, rgb(99, 147, 122), rgb(148, 230, 188));
-    align-content: center;
 }
 
-#sleep {
-    font-family: Geneva, Geneva, sans-serif;
+#sleep-deprived {
     background: linear-gradient(to left, rgb(68, 97, 177), rgb(98, 140, 255));
-    align-content: center;
+}
+
+#reviews,
+#the-album {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .row {
@@ -47,7 +47,7 @@ h2 {
     margin: calc(10% / 6);
 }
 
-#sleep-title {
+#sleep-deprived-title {
     color: azure;
     margin-top: 10px;
     margin: calc(10% / 6);
@@ -94,7 +94,7 @@ label {
     overflow: hidden;
 }
 
-#graph-city-night {
+#graph-city-night-walk {
     align-content: center;
     height: 3rem;
     border-radius: 5px;
@@ -124,7 +124,7 @@ label {
     overflow: hidden;
 }
 
-#graph-sleep {
+#graph-sleep-deprived {
     align-content: center;
     height: 5rem;
     border-radius: 5px;

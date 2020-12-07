@@ -7,55 +7,53 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Cold Morning</title>
+        <title><%= albumTitle %></title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="../css/musicDetails.css" />
         <link rel="stylesheet" href="../css/appMusicPlayer.css" />
         <%- include('../partials/style') %>
     </head>
-
-    <body id="cold-morning">
+    <body id="<%= albumDat.name  %>">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="#">upgrade your browser</a> to improve your experience.
+            </p>
+        <![endif]-->
         <%- include('../partials/navbar') %>
-        <div class="container">
+        <div id="the-album" class="container">
             <div class="row">
                 <div class="col">
-                    <img src="../Images/cold-morning.png" alt="..." />
+                    <img src="../Images/<%= albumDat.name %>.png " alt="..." />
                 </div>
 
                 <div class="col">
-                    <h2>Cold Morning</h2>
+                    <h2 id="<%= albumDat.name %>-title"><%= albumTitle %></h2>
+                    <% for(let track of albumDat.tracks) {%>
                     <div class="container-audio mb-3">
-                        <label
-                            >1. walking through the cold morning breeze</label
+                        <label for=""
+                            >track <%= track.track_number %> - <%= track.title
+                            %>
+                        </label>
+                        <div
+                            id="graph-<%=albumDat.name%>"
+                            class="container-audio"
                         >
-                        <div id="graph-cold-morning" class="container-audio">
                             <%- include('../animations/bar-animation') %>
                         </div>
                         <audio controls controlsList="nodownload">
                             <source
-                                src="../Audio/walking through the cool morning breeze.mp3"
+                                src="../Audio/<%= track.title %>.mp3"
                                 type="audio/ogg"
                             />
                         </audio>
                     </div>
-                    <div class="container-audio">
-                        <label>2. meet her at the station</label>
-                        <div id="graph-cold-morning" class="container-audio">
-                            <%- include('../animations/bar-animation') %>
-                        </div>
-                        <audio controls controlsList="nodownload">
-                            <source
-                                src="../Audio/met her at the station.mp3"
-                                type="audio/ogg"
-                            />
-                        </audio>
-                    </div>
+                    <% } %>
                 </div>
                 <%- include('../partials/reviews') %>
             </div>
         </div>
-
         <%- include('../partials/footer') %>
     </body>
 </html>

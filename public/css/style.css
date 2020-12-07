@@ -6,31 +6,61 @@ body,
 h6,
 a {
     font-size: 100%;
-    font-family: Geneva, Geneva, sans-serif;
+    /* font-family: Geneva, Geneva, sans-serif; */
+    font-family: "Raleway", sans-serif;
 }
-#the-head {
+
+#main-body,
+#login-body,
+#register-body {
+    background-color: #414141;
+}
+
+/* #the-head {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .header {
     height: 100%;
     width: 100%;
-    padding: 10%;
+    padding: 5%;
     text-align: center;
-    background: center/cover url("../Images/cover.png");
-    /* color: black; */
+    background-image: url("../Images/cover.png");
+    font-family: "Raleway", sans-serif;
+    /* Add the blur effect */
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    text-align: center;
+}
+
+.header div {
+    padding: 5%;
+    border-style: solid;
+    border-color: black;
+    border-radius: 30px;
+    box-shadow: 0 0.3em 0.3em -0.2em black;
 }
 
 .header h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(167, 255, 223, 0.8);
-    box-shadow: 0 0.5em 0.5em -0.4em black;
-    border-radius: 10%;
-    color: rgb(41, 41, 41);
+    /* background-color: rgba(167, 255, 223, 0.8);
+    border-radius: 10%; */
     font-weight: 500;
 }
 
@@ -38,8 +68,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(167, 255, 223, 0.6);
-    border-radius: 10%;
+    /* background-color: rgba(167, 255, 223, 0.6);
+    border-radius: 10%; */
 }
 
 .small-icon {
@@ -51,6 +81,9 @@ a {
     background-color: #333333;
 }
 
+.nav-link {
+    color: azure;
+}
 /*Change color of box on mouse-over*/
 .nav-link:hover {
     background-color: #dddddd;
@@ -82,6 +115,7 @@ a {
 #SlideShowContainer {
     display: block;
     margin: calc(10% / 6);
+    border-radius: 10px;
     border: 1px solid black;
 }
 
@@ -136,6 +170,7 @@ a {
     margin-top: 100px;
     margin-bottom: 100px;
     align-content: center;
+    background-color: rgba(240, 255, 255, 0.8);
     box-shadow: 0 0.5em 0.5em -0.4em black;
 }
 
@@ -150,7 +185,7 @@ a {
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    background: linear-gradient(to left, #00cc8fa8, #00ffb39d);
+    background: linear-gradient(to left, #00ffb39d, #00ffb39d);
     box-shadow: 0 0.5em 0.5em -0.4em black;
 }
 
@@ -158,18 +193,18 @@ a {
     border-style: solid;
     border-color: rgb(90, 90, 90);
     border-radius: 50px;
-    background: linear-gradient(to left, #cc008fa8, #ff2abfa8);
+    background: linear-gradient(to left, #ff2abfa8, #ff2abfa8);
 }
 #back-to-main:hover {
-    background: linear-gradient(to left, #6e004da8, #d40095a8);
+    background: linear-gradient(to left, #6e004da8, #6e004da8);
 }
 
 #register-login-container #cancel {
-    background: linear-gradient(to left, #dd0025a8, #ff3c5da8);
+    background: linear-gradient(to left, #ff3c5da8, #ff3c5da8);
 }
 
 #register-login-container #cancel:hover {
-    background: linear-gradient(to left, #630010a8, #ee0028a8);
+    background: linear-gradient(to left, #630010a8, #630010a8);
     cursor: pointer;
 }
 
@@ -179,7 +214,7 @@ a {
 }
 
 #register-login-container .btn:hover {
-    background: linear-gradient(to left, #01b37da8, #00d1929d);
+    background: linear-gradient(to left, #01b37da8, #01b37da8);
     cursor: pointer;
 }
 
