@@ -42,7 +42,7 @@ label {
     align-content: center;
     height: 5rem;
     border-radius: 5px;
-    background: center/cover url("../Images/cold-morning.PNG");
+    background: center/cover url("../Images/cold-morning.png");
     color: #444;
     margin: calc(10% / 6);
     overflow: hidden;
@@ -72,7 +72,7 @@ label {
     align-content: center;
     height: 5rem;
     border-radius: 5px;
-    background: center/cover url("../Images/springtime.PNG");
+    background: center/cover url("../Images/springtime.png");
     color: #444;
     margin: calc(10% / 6);
     overflow: hidden;
