@@ -6,8 +6,6 @@ body,
 h6,
 a {
     font-size: 100%;
-    /* font-family: Geneva, Geneva, sans-serif; */
-
     font-family: "Raleway", sans-serif;
 }
 
@@ -16,12 +14,6 @@ a {
 #register-body {
     background-color: #414141;
 }
-
-/* #the-head {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 .header {
     height: 100%;
@@ -93,7 +85,7 @@ a {
     background-color: #dddddd;
     color: black;
 }
-s
+
 /* Content Boxes */
 * {
     box-sizing: border-box;
