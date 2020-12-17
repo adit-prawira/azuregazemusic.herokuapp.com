@@ -134,7 +134,7 @@ const seedAlbum = [
                 track_number: 4,
             },
             {
-                title: "Lovesick",
+                title: "lovesick",
                 track_number: 5,
             },
         ],
