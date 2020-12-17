@@ -5,11 +5,19 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const app = express();
 const path = require("path");
-const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const methodOverride = require("method-override");
-const mongoSanitize = require("express-mongo-sanitize");
 const helmet = require("helmet");
+
+//Require flash and session
+const flash = require("connect-flash");
+const session = require("express-session");
+
+//Mongo and Mongoose libraries
+const mongoSanitize = require("express-mongo-sanitize");
+const mongoose = require("mongoose");
+
+const MongoDBStore = require("connect-mongo")(session)
 
 //Require error handling class
 const ExpressError = require("./utils/ExpressError");
@@ -19,22 +27,15 @@ const albumsRoutes = require("./routes/albums");
 const reviewRoutes = require("./routes/reviews");
 const userRoutes = require("./routes/users");
 
-//Require flash and session
-const flash = require("connect-flash");
-const session = require("express-session");
-
 //Require authentication libraries
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user");
-const {
-    default: contentSecurityPolicy,
-} = require("helmet/dist/middlewares/content-security-policy");
 
-const dataBaseUrl = process.env.DB_URL;
-// || "mongodb://localhost:27017/AzureGazeMusic";
+
+const dataBaseUrl = process.env.DB_URL || "mongodb://localhost:27017/AzureGazeMusic";
 app.engine("ejs", ejsMate);
-mongoose.connect("mongodb://localhost:27017/AzureGazeMusic", {
+mongoose.connect(dataBaseUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -59,11 +60,22 @@ app.use(
         replaceWith: "_",
     })
 );
-
+const secret = process.env.SECRET || "thisshouldbeasecret";
 //Create cookies and session will expire in a week (converted in milliseconds)
+const store = new MongoDBStore({
+    url: dataBaseUrl,
+    secret,
+    touchAfter: 24*60*60
+});
+
+store.on("error", function(e){
+    console.log('Session store error', e)
+})
+
 const sessionConfig = {
+    store,
     name: "session",
-    secret: "thisshouldbeasecret",
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -75,6 +87,8 @@ const sessionConfig = {
 };
 app.use(flash());
 app.use(session(sessionConfig));
+
+//Helmet securities
 app.use(helmet());
 const scriptSrcUrls = [
     "https://stackpath.bootstrapcdn.com/",
