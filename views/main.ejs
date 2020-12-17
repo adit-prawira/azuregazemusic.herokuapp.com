@@ -16,6 +16,12 @@
         <%- include('./partials/navbar') %>
         <section id="prof">
             <img id="profile" src="Images/profile.png" alt="..." />
+            <!-- <input
+                class="mt-3"
+                type="text"
+                name="search-bar"
+                placeholder="Search.."
+            /> -->
         </section>
 
         <img
@@ -49,12 +55,22 @@
             id="art"
             src="Images/sleep-deprived.png"
             alt="..."
-        /><img onclick="" id="art" src="Images/reminiscing.png" alt="..." /><img
-            onclick=""
+        /><img
+            onclick="redirectReminiscing()"
+            id="art"
+            src="Images/reminiscing.png"
+            alt="..."
+        /><img
+            onclick="redirectHeyThere()"
             id="art"
             src="Images/hey-there.png"
             alt="..."
-        /><img onclick="" id="art" src="Images/blue-nostalgia.png" alt="..." />
+        /><img
+            onclick="redirectBlueNostalgia()"
+            id="art"
+            src="Images/blue-nostalgia.png"
+            alt="..."
+        />
 
         <section id="SlideShowContainer">
             <img id="slide" class="SlideShow" src="Images/cold-morning.PNG" />

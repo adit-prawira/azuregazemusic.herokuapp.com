@@ -12,7 +12,7 @@ module.exports.showAlbum = async (req, res) => {
         })
         .populate("author");
     const albumDat = album[0];
-    const albumName = album[0].name;
+    // const albumName = album[0].name;
     if (!album) {
         res.redirect("/");
     }
@@ -24,7 +24,7 @@ module.exports.showAlbum = async (req, res) => {
         .map((st) => st.replace(st.charAt(0), st.charAt(0).toUpperCase()))
         .join(" ");
 
-    console.log(albumDat);
+    // console.log(albumDat);
     // res.render(`albums/${albumName}`, { albumDat });
     res.render("albums/show", { albumDat, albumTitle });
 };

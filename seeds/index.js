@@ -82,11 +82,57 @@ const seedAlbum = [
     },
     {
         name: "sleep-deprived",
-        album_type: "EP",
+        album_type: "Single",
         tracks: [
             {
                 title: "sleep deprived",
                 track_number: 1,
+            },
+        ],
+    },
+    {
+        name: "reminiscing",
+        album_type: "Single",
+        tracks: [
+            {
+                title: "reminiscing",
+                track_number: 1,
+            },
+        ],
+    },
+    {
+        name: "hey-there",
+        album_type: "Single",
+        tracks: [
+            {
+                title: "hey there",
+                track_number: 1,
+            },
+        ],
+    },
+    {
+        name: "blue-nostalgia",
+        album_type: "EP",
+        tracks: [
+            {
+                title: "love in tokyo",
+                track_number: 1,
+            },
+            {
+                title: "rain and cigarettes",
+                track_number: 2,
+            },
+            {
+                title: "funny romance",
+                track_number: 3,
+            },
+            {
+                title: "blue nostalgia",
+                track_number: 4,
+            },
+            {
+                title: "Lovesick",
+                track_number: 5,
             },
         ],
     },

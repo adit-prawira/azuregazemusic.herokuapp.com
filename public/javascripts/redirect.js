@@ -16,3 +16,12 @@ function redirectWander() {
 function redirectSleep() {
     location.replace("/sleep-deprived");
 }
+function redirectReminiscing() {
+    location.replace("/reminiscing");
+}
+function redirectHeyThere() {
+    location.replace("/hey-there");
+}
+function redirectBlueNostalgia() {
+    location.replace("/blue-nostalgia");
+}

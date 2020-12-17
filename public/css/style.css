@@ -7,6 +7,7 @@ h6,
 a {
     font-size: 100%;
     /* font-family: Geneva, Geneva, sans-serif; */
+
     font-family: "Raleway", sans-serif;
 }
 
@@ -28,7 +29,7 @@ a {
     padding: 5%;
     text-align: center;
     background-image: url("../Images/cover.png");
-    font-family: "Raleway", sans-serif;
+    font-family: Raleway, sans-serif;
     /* Add the blur effect */
     /* filter: blur(8px);
     -webkit-filter: blur(8px); */
@@ -61,13 +62,16 @@ a {
     align-items: center;
     /* background-color: rgba(167, 255, 223, 0.8);
     border-radius: 10%; */
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 200%;
 }
 
 .header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 300%;
+    font-weight: bold;
     /* background-color: rgba(167, 255, 223, 0.6);
     border-radius: 10%; */
 }
@@ -89,7 +93,7 @@ a {
     background-color: #dddddd;
     color: black;
 }
-
+s
 /* Content Boxes */
 * {
     box-sizing: border-box;
@@ -154,6 +158,7 @@ a {
 }
 
 .footer {
+    border-top: 1px solid #414141;
     padding-top: 20px;
     padding-bottom: 20px;
     align-items: right;
