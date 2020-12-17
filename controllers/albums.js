@@ -2,7 +2,6 @@ const Album = require("../models/album");
 
 module.exports.showAlbum = async (req, res) => {
     const { name } = req.params;
-    console.log(req.params);
     const album = await Album.find({ name })
         .populate({
             path: "reviews",
@@ -23,8 +22,5 @@ module.exports.showAlbum = async (req, res) => {
         .split(" ")
         .map((st) => st.replace(st.charAt(0), st.charAt(0).toUpperCase()))
         .join(" ");
-
-    // console.log(albumDat);
-    // res.render(`albums/${albumName}`, { albumDat });
     res.render("albums/show", { albumDat, albumTitle });
 };
