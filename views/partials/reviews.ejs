@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="../css/stars.css" />
+<% if(currentUser){ %>
 <div id="reviews" class="row">
-    <% if(currentUser){ %>
+    
     <h3 class="mt-3">Comments/Reviews</h3>
     <form
         action="/<%= albumDat.name %>/reviews"
@@ -69,10 +70,14 @@
         </div>
         <button id="submit" class="btn btn-success">Submit</button>
     </form>
-
-    <% } %> 
     
 </div>
+<% } else{%> 
+    <hr style = "color: white">
+<h5 id = "review-title"> Sign In/Up to Leave a Review
+</h5>
+    <% } %> 
+
 <div><% for(let review of albumDat.reviews) {%>
     <div class="card mb-3 mt-3">
         <div class="card-body">
