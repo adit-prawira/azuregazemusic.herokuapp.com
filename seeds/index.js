@@ -3,7 +3,8 @@ if (process.env.NODE_ENV !== "production") {
 }
 const mongoose = require("mongoose");
 const Album = require("../models/album");
-const dataBaseUrl = process.env.DB_URL;
+const dataBaseUrl =
+    process.env.DB_URL || "mongodb://localhost:27017/AzureGazeMusic";
 mongoose.connect(dataBaseUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -142,15 +143,34 @@ const seedAlbum = [
 ];
 
 const seedDB = async () => {
-    await Album.deleteMany({});
-    for (let album of seedAlbum) {
-        const music = new Album({
-            name: album.name,
-            album_type: album.album_type,
-            tracks: album.tracks,
-        });
-        await music.save();
-    }
+    const music = new Album({
+        name: "within-the-mist",
+        album_type: "EP",
+        tracks: [
+            {
+                title: "within the mist",
+                track_number: 1,
+            },
+            {
+                title: "sanpo",
+                track_number: 2,
+            },
+            {
+                title: "by your side",
+                track_number: 3,
+            },
+        ],
+    });
+    await music.save();
+    // await Album.deleteMany({});
+    // for (let album of seedAlbum) {
+    //     const music = new Album({
+    //         name: album.name,
+    //         album_type: album.album_type,
+    //         tracks: album.tracks,
+    //     });
+    //     await music.save();
+    // }
 };
 
 seedDB().then(() => mongoose.connection.close());

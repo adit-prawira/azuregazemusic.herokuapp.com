@@ -17,30 +17,33 @@ function autoChange() {
 
     switch (slideIndex) {
         case 0:
-            container.style.backgroundColor = "#72D7C0";
+            container.style.backgroundColor = "#7A88AE";
             break;
         case 1:
-            container.style.backgroundColor = "#FFFEFE";
+            container.style.backgroundColor = "#72D7C0";
             break;
         case 2:
-            container.style.backgroundColor = "#588A8E";
+            container.style.backgroundColor = "#FFFEFE";
             break;
         case 3:
-            container.style.backgroundColor = "#DBC2A8";
+            container.style.backgroundColor = "#588A8E";
             break;
         case 4:
-            container.style.backgroundColor = "#549578";
+            container.style.backgroundColor = "#DBC2A8";
             break;
         case 5:
-            container.style.backgroundColor = "#3C62B7";
+            container.style.backgroundColor = "#549578";
             break;
         case 6:
-            container.style.backgroundColor = "#C3D59F";
+            container.style.backgroundColor = "#3C62B7";
             break;
         case 7:
-            container.style.backgroundColor = "#99B8F5";
+            container.style.backgroundColor = "#C3D59F";
             break;
         case 8:
+            container.style.backgroundColor = "#99B8F5";
+            break;
+        case 9:
             container.style.backgroundColor = "#081029";
             break;
         default:
