@@ -17,7 +17,7 @@ const session = require("express-session");
 const mongoSanitize = require("express-mongo-sanitize");
 const mongoose = require("mongoose");
 
-const MongoDBStore = require("connect-mongo")(session)
+const MongoDBStore = require("connect-mongo")(session);
 
 //Require error handling class
 const ExpressError = require("./utils/ExpressError");
@@ -32,8 +32,8 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user");
 
-
-const dataBaseUrl = process.env.DB_URL || "mongodb://localhost:27017/AzureGazeMusic";
+const dataBaseUrl =
+    process.env.DB_URL || "mongodb://localhost:27017/AzureGazeMusic";
 app.engine("ejs", ejsMate);
 mongoose.connect(dataBaseUrl, {
     useNewUrlParser: true,
@@ -65,12 +65,12 @@ const secret = process.env.SECRET || "thisshouldbeasecret";
 const store = new MongoDBStore({
     url: dataBaseUrl,
     secret,
-    touchAfter: 24*60*60
+    touchAfter: 24 * 60 * 60,
 });
 
-store.on("error", function(e){
-    console.log('Session store error', e)
-})
+store.on("error", function (e) {
+    console.log("Session store error", e);
+});
 
 const sessionConfig = {
     store,
@@ -157,7 +157,7 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("error", { err });
 });
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log("Run Server:");
 });

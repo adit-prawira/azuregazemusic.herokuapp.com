@@ -1,3 +1,6 @@
+function redirectLost() {
+    location.replace("/lost");
+}
 function redirectWithinTheMist() {
     location.replace("/within-the-mist");
 }

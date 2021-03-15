@@ -3,6 +3,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 const mongoose = require("mongoose");
 const Album = require("../models/album");
+
 const dataBaseUrl =
     process.env.DB_URL || "mongodb://localhost:27017/AzureGazeMusic";
 mongoose.connect(dataBaseUrl, {
@@ -144,20 +145,16 @@ const seedAlbum = [
 
 const seedDB = async () => {
     const music = new Album({
-        name: "within-the-mist",
+        name: "lost",
         album_type: "EP",
         tracks: [
             {
-                title: "within the mist",
+                title: "lost",
                 track_number: 1,
             },
             {
-                title: "sanpo",
+                title: "lakeside",
                 track_number: 2,
-            },
-            {
-                title: "by your side",
-                track_number: 3,
             },
         ],
     });
