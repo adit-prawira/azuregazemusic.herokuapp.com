@@ -3,9 +3,8 @@ if (process.env.NODE_ENV !== "production") {
 }
 const mongoose = require("mongoose");
 const Album = require("../models/album");
-
-const dataBaseUrl =
-    process.env.DB_URL || "mongodb://localhost:27017/AzureGazeMusic";
+//|| "mongodb://localhost:27017/AzureGazeMusic";
+const dataBaseUrl = process.env.DB_URL;
 mongoose.connect(dataBaseUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
