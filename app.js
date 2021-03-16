@@ -31,9 +31,11 @@ const userRoutes = require("./routes/users");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user");
-//|| "mongodb://localhost:27017/AzureGazeMusic"
+
 const dataBaseUrl = process.env.DB_URL;
+const developmentDatabase = "mongodb://localhost:27017/AzureGazeMusic";
 app.engine("ejs", ejsMate);
+
 mongoose.connect(dataBaseUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
