@@ -1,3 +1,9 @@
+function redirectLost() {
+    location.replace("/lost");
+}
+function redirectWithinTheMist() {
+    location.replace("/within-the-mist");
+}
 function redirectColdMorning() {
     location.replace("/cold-morning");
 }

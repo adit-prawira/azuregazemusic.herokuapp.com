@@ -14,7 +14,8 @@ h2 {
     margin-top: 10px;
     margin: calc(10% / 6);
 }
-h3 {
+h3,
+#review-title {
     color: azure;
 }
 label {
@@ -37,7 +38,24 @@ label {
     margin: calc(10% / 6);
     overflow: hidden;
 }
-
+#graph-lost {
+    align-content: center;
+    height: 5rem;
+    border-radius: 5px;
+    background: center/cover url("../Images/lost.png");
+    color: #444;
+    margin: calc(10% / 6);
+    overflow: hidden;
+}
+#graph-within-the-mist {
+    align-content: center;
+    height: 5rem;
+    border-radius: 5px;
+    background: center/cover url("../Images/within-the-mist.png");
+    color: #444;
+    margin: calc(10% / 6);
+    overflow: hidden;
+}
 #graph-cold-morning {
     align-content: center;
     height: 5rem;

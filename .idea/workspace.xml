@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d909fa6-41d6-4cea-baf1-e23579c37826" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FirstPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FirstPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectNotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectNotes.txt" afterDir="false" />
-    </list>
+    <list default="true" id="2d909fa6-41d6-4cea-baf1-e23579c37826" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +71,7 @@
       <workItem from="1604279033275" duration="2508000" />
       <workItem from="1604392795716" duration="1160000" />
       <workItem from="1604480066033" duration="288000" />
+      <workItem from="1608434762895" duration="17000" />
     </task>
     <servers />
   </component>
@@ -90,9 +87,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="0" y="110" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1603871424271" />
-    <state x="0" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1604480064868">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="1440" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1608434762906">
+      <screen x="1440" y="22" width="1920" height="1058" />
     </state>
+    <state x="1440" y="348" key="com.intellij.ide.util.TipDialog/0.22.1440.878/1440.22.1920.1058@1440.22.1920.1058" timestamp="1608434762906" />
     <state x="0" y="293" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1604480064868" />
     <state x="203" y="380" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603879331232">
       <screen x="0" y="23" width="1440" height="877" />
